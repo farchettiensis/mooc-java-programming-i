@@ -6,8 +6,15 @@ import java.util.Scanner;
 public class SportStatistics {
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("File:");
+        String fileName = scanner.nextLine();
 
+        try (Scanner fileReader = new Scanner(Paths.get(fileName))) {
+
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
     }
 
 }
