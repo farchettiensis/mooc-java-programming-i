@@ -32,6 +32,14 @@ public class Game {
         return this.visitingTeamPoints;
     }
 
+    public boolean isHomeTeamWinner() {
+        return this.homeTeamPoints > this.visitingTeamPoints;
+    }
+
+    public boolean isVisitingTeamWinner() {
+        return this.visitingTeamPoints > this.homeTeamPoints;
+    }
+
     @Override
     public String toString() {
         return this.homeTeam + "," + this.visitingTeam + "," + this.homeTeamPoints + "," + this.visitingTeamPoints;
